@@ -8,7 +8,7 @@ export default Ember.Object.extend({
   queue          : Ember.A([]),
   isEmpty        : computed.equal('queue.length', 0),
 
-  defaultTimeout : 10000,
+  defaultTimeout : 3000,
 
   success: function(message, timeout) {
     timeout = (timeout === undefined) ? get(this, 'defaultTimeout') : timeout;
